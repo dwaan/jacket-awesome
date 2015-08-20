@@ -4,23 +4,27 @@ var gulp = require('gulp'),
     minifyCSS = require('gulp-minify-css');
 
 gulp.task('css', function() {
-    gulp.src('./vendor/font-awesome/css/font-awesome.css')
-        .pipe(replace('fa-', 'xn-'))
-        .pipe(replace('fa-', 'xn-'))
-        .pipe(replace('.fa', '.xn'))
+    gulp.src('./vendor/entypo/font/entypo.css')
+        .pipe(replace('icon-', 'xn-'))
+        .pipe(replace('.icon', '.xn'))
+        .pipe(replace('url(\'', 'url(\'../fonts/'))
         .pipe(rename("jacket-awesome.css"))
         .pipe(gulp.dest('dist/css'));
 
-    gulp.src('./vendor/font-awesome/css/font-awesome.css')
-        .pipe(replace('fa-', 'xn-'))
-        .pipe(replace('.fa', '.xn'))
+    gulp.src('./vendor/entypo/font/entypo.css')
+        .pipe(replace('icon-', 'xn-'))
+        .pipe(replace('.icon', '.xn'))
+        .pipe(replace('url(\'', 'url(\'../fonts'))
         .pipe(minifyCSS())
         .pipe(rename("jacket-awesome.min.css"))
         .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('fonts', function() {
-    gulp.src('./vendor/font-awesome/fonts/**/*.*')
+    gulp.src(['./vendor/entypo/font/entypo.svg',
+             './vendor/entypo/font/entypo.ttf',
+             './vendor/entypo/font/entypo.eot',
+             './vendor/entypo/font/entypo.woff'])
         .pipe(gulp.dest('dist/fonts'));
 });
 
