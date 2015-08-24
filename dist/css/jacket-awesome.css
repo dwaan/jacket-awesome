@@ -153,7 +153,7 @@
 .xn-up-open-mini:before { content: "\e763"; } /* '\e763' */
 .xn-down-open-big:before { content: "\e764"; } /* '\e764' */
 .xn-left-open-big:before { content: "\e765"; } /* '\e765' */
-.xn-right-open-big:before { content: "\e766"; } /* '\e766' */
+.xn-nav:before, .xn-right-open-big:before { content: "\e766"; } /* '\e766' */
 .xn-up-open-big:before { content: "\e767"; } /* '\e767' */
 .xn-down:before { content: "\2b07"; } /* '\2b07' */
 .xn-left:before { content: "\2b05"; } /* '\2b05' */
