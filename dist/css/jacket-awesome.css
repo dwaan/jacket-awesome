@@ -47,7 +47,7 @@
 .xn-layout:before { content: "\268f"; } /* '\268f' */
 .xn-menu:before { content: "\2630"; } /* '\2630' */
 .xn-check:before { content: "\2713"; } /* '\2713' */
-.xn-cancel:before { content: "\2715"; } /* '\2715' */
+.xn-close:before, .xn-cancel:before { content: "\2715"; } /* '\2715' */
 .xn-cancel-circled:before { content: "\2716"; } /* '\2716' */
 .xn-cancel-squared:before { content: "\274e"; } /* '\274e' */
 .xn-plus:before { content: "\2b"; } /* '\2b' */
