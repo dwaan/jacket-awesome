@@ -313,3 +313,14 @@
 .xn-db-shape:before { content: "\f600"; } /* '\f600' */
 .xn-logo-db:before { content: "\f603"; } /* '\f603' */
 
+
+.xn-1x { font-size:100% }
+.xn-2x { font-size:200% }
+.xn-3x { font-size:300% }
+.xn-4x { font-size:400% }
+.xn-5x { font-size:500% }
+.xn-6x { font-size:600% }
+.xn-7x { font-size:700% }
+.xn-8x { font-size:800% }
+.xn-9x { font-size:900% }
+.xn-10x { font-size:1000% }

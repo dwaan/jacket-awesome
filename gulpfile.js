@@ -1,26 +1,26 @@
 var gulp = require('gulp'),
-    rename = require('gulp-rename'),
     replace = require('gulp-replace'),
+    concat = require('gulp-concat'),
     minifyCSS = require('gulp-minify-css');
 
 gulp.task('css', function() {
-    gulp.src('./vendor/entypo/font/entypo.css')
+    gulp.src(['./vendor/entypo/font/entypo.css', './additional.src.css'])
+        .pipe(concat('jacket-awesome.css'))
         .pipe(replace('icon-', 'xn-'))
         .pipe(replace('.icon', '.xn'))
         .pipe(replace('.xn-right-open-big:before', '.xn-nav:before, .xn-right-open-big:before'))
         .pipe(replace('.xn-cancel:before', '.xn-close:before, .xn-cancel:before'))
         .pipe(replace('url(\'', 'url(\'../fonts/'))
-        .pipe(rename("jacket-awesome.css"))
         .pipe(gulp.dest('dist/css'));
 
-    gulp.src('./vendor/entypo/font/entypo.css')
+    gulp.src(['./vendor/entypo/font/entypo.css', './additional.src.css'])
+        .pipe(concat('jacket-awesome.min.css'))
         .pipe(replace('icon-', 'xn-'))
         .pipe(replace('.icon', '.xn'))
         .pipe(replace('.xn-right-open-big:before', '.xn-nav:before, .xn-right-open-big:before'))
         .pipe(replace('.xn-cancel:before', '.xn-close:before, .xn-cancel:before'))
         .pipe(replace('url(\'', 'url(\'../fonts/'))
         .pipe(minifyCSS())
-        .pipe(rename("jacket-awesome.min.css"))
         .pipe(gulp.dest('dist/css'));
 });
 
