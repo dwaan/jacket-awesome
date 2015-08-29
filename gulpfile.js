@@ -18,7 +18,7 @@ gulp.task('css', function() {
         .pipe(replace('.icon', '.xn'))
         .pipe(replace('.xn-right-open-big:before', '.xn-nav:before, .xn-right-open-big:before'))
         .pipe(replace('.xn-cancel:before', '.xn-close:before, .xn-cancel:before'))
-        .pipe(replace('url(\'', 'url(\'../fonts'))
+        .pipe(replace('url(\'', 'url(\'../fonts/'))
         .pipe(minifyCSS())
         .pipe(rename("jacket-awesome.min.css"))
         .pipe(gulp.dest('dist/css'));
