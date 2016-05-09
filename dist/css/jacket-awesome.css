@@ -314,6 +314,7 @@
 .xn-logo-db:before { content: "\f603"; } /* '\f603' */
 
 
+.xn { background-size:contain; background-repeat:no-repeat }
 .xn-1x { font-size:100% }
 .xn-2x { font-size:200% }
 .xn-3x { font-size:300% }
